@@ -1,2 +1,2 @@
 #!/bin/bash
-unison go
+unison profile-name-here
