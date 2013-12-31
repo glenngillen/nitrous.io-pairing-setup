@@ -1,0 +1,3 @@
+root = /Users/username/Development/go
+root = ssh://nitrous-go/workspace
+include common
