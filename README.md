@@ -12,3 +12,5 @@ You'll need `fswatch` and `unison`:
 ```term
 brew install fswatch unison
 ```
+
+Setup [vundle](https://github.com/gmarik/vundle).
