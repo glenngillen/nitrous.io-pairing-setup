@@ -1,0 +1,2 @@
+#!/bin/bash
+fswatch $HOME/Development/project "date +%H:%M:%S; unison $HOME/Development/project ssh://nitrous-box-for-project/workspace -ui text -terse -batch"
