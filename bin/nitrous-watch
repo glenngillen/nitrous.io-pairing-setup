@@ -1,2 +1,2 @@
 #!/bin/bash
-fswatch $HOME/Development/project "date +%H:%M:%S; unison go"
+unison go
