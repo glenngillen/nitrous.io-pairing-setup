@@ -20,3 +20,6 @@ brew install fswatch unison
 
 
 Setup [vundle](https://github.com/gmarik/vundle).
+
+
+[![Analytics](https://ga-beacon.appspot.com/UA-46840117-1/glenngillen/nitrous.io-pairing-setup?pixel)](https://github.com/igrigorik/ga-beacon)
