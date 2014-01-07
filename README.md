@@ -35,7 +35,7 @@ And then make sure the `bin/nitrous-watch` file is accessible in your `$PATH`. I
 $ ln -s /full/path/to/nitrous.io-pairing-setup/bin/nitrous-watch $HOME/bin/nitrous-watch
 ```
 
-### Configure you're editor
+### Configure your editor
 
 You'll need to configure your editor or IDE of choice to do both of the following:
 
