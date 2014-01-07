@@ -4,5 +4,6 @@ if [ ! -f ./.nitrousio ]; then
 	read NITROUS_HOST
 	echo $NITROUS_HOST > ./.nitrousio
 fi
+NITROUS_HOST=$(cat ./.nitrousio)
 echo "Nitrous.io box is $NITROUS_HOST"
 unison nitrous ./ $NITROUS_HOST/workspace
