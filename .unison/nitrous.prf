@@ -1,1 +1,7 @@
-include common
+addprefsto = common
+batch = true
+terse = true
+ui = text
+repeat = 1
+
+ignore = Name *.sw?
