@@ -26,7 +26,7 @@ git clone https://github.com/glenngillen/nitrous.io-pairing-setup.git
 And then make sure the `bin/nitrous-watch` file is accessible in your `$PATH`. I've got `$HOME/bin` in my path so I symlinked the file in:
 
 ```term
-ln -s /full/path/to/nitrous.io-pairing-setup.git/bin/nitrous-watch $HOME/bin/nitrous-watch
+ln -s /full/path/to/nitrous.io-pairing-setup/bin/nitrous-watch $HOME/bin/nitrous-watch
 ```
 
 ### Configure you're editor
