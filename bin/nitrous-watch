@@ -1,2 +1,8 @@
 #!/bin/bash
-unison profile-name-here
+if [ ! -f ./.nitrousio ]; then
+	echo "Specify the SSH URI to the Nitrous.io box for this app (e.g., ssh://action@usw1.actionbox.io:12353): "
+	read NITROUS_HOST
+	echo $NITROUS_HOST > ./.nitrousio
+fi
+echo "Nitrous.io box is $NITROUS_HOST"
+unison nitrous ./ $NITROUS_HOST/workspace
