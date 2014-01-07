@@ -23,6 +23,12 @@ Clone this repo:
 git clone https://github.com/glenngillen/nitrous.io-pairing-setup.git
 ```
 
+Copy the unison profile settings into your `$HOME` directory:
+
+```term
+cp -r /full/path/to/nitrous.io-pairing-setup/.unison $HOME/
+```
+
 And then make sure the `bin/nitrous-watch` file is accessible in your `$PATH`. I've got `$HOME/bin` in my path so I symlinked the file in:
 
 ```term
