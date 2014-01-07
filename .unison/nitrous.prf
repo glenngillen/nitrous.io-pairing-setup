@@ -1,4 +1,3 @@
-addprefsto = common
 batch = true
 terse = true
 ui = text
