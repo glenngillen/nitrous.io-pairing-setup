@@ -13,25 +13,25 @@ Scripts, configs, and other things to make syncing files and pairing via Nitrous
 
 You'll need to install `unison`:
 
-```term
+```sh
 $ brew install unison
 ```
 
 Clone this repo:
 
-```term
+```sh
 $ git clone https://github.com/glenngillen/nitrous.io-pairing-setup.git
 ```
 
 Copy the unison profile settings into your `$HOME` directory:
 
-```term
+```sh
 $ cp -r /full/path/to/nitrous.io-pairing-setup/.unison $HOME/
 ```
 
 And then make sure the `bin/nitrous-watch` file is accessible in your `$PATH`. I've got `$HOME/bin` in my path so I symlinked the file in:
 
-```term
+```sh
 $ ln -s /full/path/to/nitrous.io-pairing-setup/bin/nitrous-watch $HOME/bin/nitrous-watch
 ```
 
@@ -56,7 +56,7 @@ To reduce the overhead associated with establishing an SSH connection (which is 
 
 Once everything is setup, go into the directory that your app lives in and run `nitrous-watch`, you'll be prompted for the SSH URI for the box associated with this app:
 
-``` term
+```sh
 $ cd my-app
 $ nitrous-watch
 Specify the SSH URI to the Nitrous.io box for this app (e.g., ssh://action@usw1.actionbox.io:12353):
