@@ -5,3 +5,4 @@ repeat = 1
 
 ignore = Name .*.swp
 ignore = Name .*.swo
+ignore = Name .*.log
