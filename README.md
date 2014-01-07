@@ -14,25 +14,25 @@ Scripts, configs, and other things to make syncing files and pairing via Nitrous
 You'll need to install `unison`:
 
 ```term
-brew install unison
+$ brew install unison
 ```
 
 Clone this repo:
 
 ```term
-git clone https://github.com/glenngillen/nitrous.io-pairing-setup.git
+$ git clone https://github.com/glenngillen/nitrous.io-pairing-setup.git
 ```
 
 Copy the unison profile settings into your `$HOME` directory:
 
 ```term
-cp -r /full/path/to/nitrous.io-pairing-setup/.unison $HOME/
+$ cp -r /full/path/to/nitrous.io-pairing-setup/.unison $HOME/
 ```
 
 And then make sure the `bin/nitrous-watch` file is accessible in your `$PATH`. I've got `$HOME/bin` in my path so I symlinked the file in:
 
 ```term
-ln -s /full/path/to/nitrous.io-pairing-setup/bin/nitrous-watch $HOME/bin/nitrous-watch
+$ ln -s /full/path/to/nitrous.io-pairing-setup/bin/nitrous-watch $HOME/bin/nitrous-watch
 ```
 
 ### Configure you're editor
@@ -54,6 +54,30 @@ To reduce the overhead associated with establishing an SSH connection (which is 
 
 ## Usage
 
-TBD.
+Once everything is setup, go into the directory that your app lives in and run `nitrous-watch`, you'll be prompted for the SSH URI for the box associated with this app:
+
+``` term
+$ cd my-app
+$ nitrous-watch
+Specify the SSH URI to the Nitrous.io box for this app (e.g., ssh://action@usw1.actionbox.io:12353):
+ssh://action@usw1.actionbox.io:12353
+Nitrous.io box is ssh://action@usw1.actionbox.io:12353
+Warning: No archive files were found for these roots, whose canonical names are:
+        /Users/jessie-example/dev/my-app
+        //go-dev-65376//home/action/workspace
+        This can happen either
+        because this is the first time you have synchronized these roots,
+        or because you have upgraded Unison to a new version with a different
+        archive format.
+
+        Update detection may take a while on this run if the replicas are
+        large.
+
+        ...
+```
+
+The initial sync will probably throw up a heap of noise as it moves the app up into your workspace on your Nitrous.io box. The SSH URI for the app is saved into a `.nitrousio` file within the app working directory on your machine, so you won't be prompted for it a 2nd time.
+
+This also means there is a 1:1 mapping between apps and Nitrous.io boxes, trying to reuse a box for a different app will have undesirable consequences. This is by design as it's part of the app-centric development workflow I try to maintain.
 
 [![Analytics](https://ga-beacon.appspot.com/UA-46840117-1/nitrous.io-pairing-setup/readme?pixel)](https://github.com/igrigorik/ga-beacon)
